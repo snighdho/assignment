@@ -1,2 +1,30 @@
-@import "tailwindcss";
-@plugin "daisyui";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Hide desktop menu by default */
+.desktop-menu {
+  display: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* Show desktop menu on wider screens */
+@media (min-width: 768px) {
+  .desktop-menu {
+    display: flex;
+  }
+}
+
+/* Mobile menu button is visible by default */
+.mobile-menu-button {
+  display: block;
+}
+
+/* Hide mobile menu button on wider screens */
+@media (min-width: 768px) {
+  .mobile-menu-button {
+    display: none;
+  }
+}
